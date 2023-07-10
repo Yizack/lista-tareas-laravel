@@ -1,0 +1,10 @@
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tarea-button {
+  display: inline-flex!important;
+  padding: 5px!important;
+}
