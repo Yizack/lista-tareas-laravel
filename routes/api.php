@@ -21,7 +21,12 @@ Route::middleware("auth:sanctum")->get("/user", function (Request $request) {
 Route::get("/tareas", [TareaController::class, "index"]);
 
 Route::prefix("/tareas")->group(function() {
+    // Crear
     Route::post("/",[TareaController::class, "store"]);
+    // Modificar
     Route::put("/{id}" , [TareaController::class, "update"]);
+    // Eliminar
     Route::delete("/{id}", [TareaController::class, "destroy"] );
+    // Completar
+    Route::patch("/{id}" , [TareaController::class, "complete"]);
 });

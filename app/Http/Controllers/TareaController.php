@@ -5,28 +5,18 @@ use App\Models\Tarea;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
-class TareaController extends Controller
-{
+class TareaController extends Controller {
     /**
-     * Display a listing of the resource.
+     * Muestra todas las tareas de la base de datos
      *
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return Tarea::orderBy("created_at", "desc")->get();
+        return Tarea::orderBy("created_at", "asc")->get();
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create() {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
+     * Almacena una nueva tarea en la base de datos
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -39,27 +29,25 @@ class TareaController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Actualiza el estado de la tarea a completado o no completado
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id) {
-        //
+    public function complete(Request $request, $id) {
+        $getTarea = Tarea::find($id);  
+        if($getTarea){
+           $getTarea->completado = $request->completado;
+           $getTarea->updated_at = Carbon::now();
+           $getTarea->save();
+           return $request;
+        } 
+        return "Tarea no encontrada";
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id) {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
+     * Modificar una tarea
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -68,7 +56,7 @@ class TareaController extends Controller
     public function update(Request $request, $id) {
         $getTarea = Tarea::find($id);  
         if($getTarea){
-           $getTarea->completed = $request->item["completado"];
+           $getTarea->nombre = $request->tarea["nombre"];
            $getTarea->updated_at = Carbon::now() ;
            $getTarea->save();
            return $getTarea;
@@ -77,7 +65,7 @@ class TareaController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Elimina una tarea de la base de datos
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
