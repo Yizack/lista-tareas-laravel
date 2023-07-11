@@ -100,3 +100,32 @@ pnpm dev
 ```sh
 php artisan serve
 ```
+
+## REST API
+
+Puntos finales de la API
+
+| Endpoint          | Método | Descripción              |
+|-------------------|--------|--------------------------|
+| `/api/tareas`     | GET    | Obtener todas las tareas |
+| `/api/tareas`     | POST   | Crear tarea              |
+| `/api/tareas/:id` | PUT    | Modificar tarea          |
+| `/api/tareas/:id` | DELETE | Eliminar tarea           |
+| `/api/tareas/:id` | PATCH  | Completar tarea          |
+
+
+## Información adicional (Base de datos)
+
+### Laravel
+
+El framework de Laravel nos permite crear migraciones de nuestra estructura de base de datos fácilmente utilizando el directorio `database/migrations` con código PHP. Por ejemplo, ver el archivo [`tareas_table.php`](/database/migrations/tareas_table.php)
+
+Igualmente también nos facilita la creación de rutas de nuestra api utilizando el directorio `routes` y el archivo [`api.php`](/routes/api.php), a estas rutas podemos asignarles funciones de un controlador para obtener las tareas y realizar las modificaciones de nuestra base de datos.
+
+El archivo del controlador de tareas donde se encuentran las acciones está localizado en [`app/Http/Controllers/TareaController.php`](app/Http/Controllers/TareaController.php)
+
+### Instrucciones SQL
+
+Para motivos de demostración de conocimiento también he creado un archivo con instrucciones para crear la tabla de la base de datos y los procedimientos de almacenado en caso de que no exista una opción de migración de base de datos como la que ofrece Laravel.
+
+El archivo con las instrucciones se puede encontrar en [`db.sql`](/db.sql)
