@@ -14,7 +14,7 @@ Prueba de nivel intermedio
 ## Requerimientos para reproducción
 - Descargar e Instalar [GitHub CLI](https://cli.github.com/)
 - Descargar e Instalar PHP y MySQL, yo he utilizado [XAMPP](https://www.apachefriends.org/es/download.html) (PHP 8.2.4) como entorno
-- Dentro de la carpeta `C:\xampp\php`, habilitar la extensión zip en el archivo `php.ini` de PHP si es necesario
+- Dentro de la carpeta `C:\xampp\php`, habilitar la extensión zip en el archivo `php.ini` de PHP si es necesario para habilitar la instalación de los paquetes de composer
 - Descargar e instalar [Composer](https://getcomposer.org/download/) (2.5.8)
 - Descargar e instalar [Node.js](https://nodejs.org/en/download) (18.16.1)
 - Instalar PNPM utilizando el comando `npm install pnpm@latest -g`
