@@ -60,37 +60,39 @@ composer install
 pnpm install
 ```
 
-5. Renombrar el archivo `.env.example` a `.env` para hacer uso de las variables de entorno.
-
 ## Pasos para ejecutar el proyecto
 
 Para la ejecución del proyecto se necesitará realizar los siguientes pasos.
 
-1. Iniciar Apache y MySQL por ejemplo en XAMPP
+1. IMPORTANTE: Renombrar el archivo `.env.example` a `.env` para hacer uso de las variables de entorno.
+
+2. Iniciar Apache y MySQL por ejemplo en XAMPP
 
 ![xampp](https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/23df3714-d0cb-444d-b177-065c4fcab401)
 
-2. Abrir una consola en el directorio del proyecto y ejecutar el siguiente comando para realizar la migración de la base de datos
+3. Abrir una consola en el directorio del proyecto y ejecutar el siguiente comando para realizar la migración de la base de datos
 
 ```sh
 php artisan migrate
 ```
 
-3. Ejecutar la build de Vue con Vite
+4. Ejecutar la build de Vue con Vite
 
 ```sh
 pnpm build
 ```
 
-3. Para iniciar el servidor, ejecutar
+5. Para iniciar el servidor, ejecutar
 
 ```sh
 php artisan serve
 ```
 
-4. Acceder a la dirección http://localhost:8000 en el navegador.
+6. Acceder a la dirección http://localhost:8000 en el navegador.
 
-5. Pantalla inicial si todo se ha ejecutado correctamente.
+7. Generar "App key" y actualizar
+
+8. Pantalla inicial si todo se ha ejecutado correctamente.
 
 ![captura-start](https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/cbcb0f43-73e2-4349-abbb-b468533d0318)
 
