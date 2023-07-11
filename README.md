@@ -106,6 +106,17 @@ Puntos finales de la API
 | `/api/tareas/:id` | DELETE | Eliminar tarea           |
 | `/api/tareas/:id` | PATCH  | Completar tarea          |
 
+La API web devuelve todos los datos de respuesta como un objeto JSON. A continuación se muestran tablas con la descripción de todas las propiedades.
+
+| Propiedad         | Tipo      | Descripción                       |
+|-------------------|-----------|-----------------------------------|
+| `id`              | integer   | Identificador de la tarea         |
+| `nombre`          | string    | Nombre de la tarea                |
+| `completado`      | boolean   | Completación de la tarea          |
+| `created_at`      | timestamp | Fecha y tiempo de creación        |
+| `updated_at`      | timestamp | Fecha y tiempo de modificación    |
+
+
 ## Ejemplo
 
 Captura del funcionamiento
