@@ -10,6 +10,7 @@ Prueba de nivel intermedio
 - Node.js
 - Vue 3
 - Vite
+- Bootstrap 5
 
 ## Requerimientos para reproducción
 - Descargar e Instalar [GitHub CLI](https://cli.github.com/)
@@ -73,6 +74,16 @@ php artisan serve
 ```
 
 4. Acceder a la dirección http://localhost:8000 en el navegador.
+
+5. Pantalla inicial si todo se ha ejecutado correctamente.
+
+![captura-start](images/captura-start.jpg)
+
+## Ejemplo
+
+Captura del funcionamiento
+
+![captura](images/captura.jpg)
 
 ## Desarrollo
 
