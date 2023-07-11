@@ -92,6 +92,8 @@ php artisan serve
 
 7. Generar "App key" y actualizar
 
+![appkey](https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/0a015c1d-f13a-40c1-8cf8-c91e58c81c7e)
+
 8. Pantalla inicial si todo se ha ejecutado correctamente.
 
 ![captura-start](https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/cbcb0f43-73e2-4349-abbb-b468533d0318)
