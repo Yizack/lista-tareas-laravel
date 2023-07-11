@@ -36,7 +36,6 @@ export default {
     };
   },
   mounted () {
-    // @ts-ignore
     const toast = showToast(this.$refs.toast);
     toast.addEventListener("hidden.bs.toast", () => {
       this.$emit("dispose");

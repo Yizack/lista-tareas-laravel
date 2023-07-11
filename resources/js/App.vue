@@ -69,7 +69,11 @@ export default {
     this.tareas = await ApiService.getTareas();
   },
   methods: {
-    // Crear tarea
+    /**
+     * Agregar tarea: se ejecuta al enviar el formulario
+     * @method
+     * @async
+     */
     async addTarea () {
       this.loading = true;
       const tarea = await ApiService.addTarea(this.nuevaTarea);
@@ -83,7 +87,12 @@ export default {
       this.nuevaTarea.nombre = "";
       this.tareas.push(tarea);
     },
-    // Eliminar tarea
+    /**
+     * Eliminar tarea: se ejecuta al hacer click en el botón de eliminar
+     * @method
+     * @async
+     * @param {Number} id
+     */
     async deleteTarea (id) {
       this.loading = true;
       const tarea = await ApiService.deleteTarea(id);
@@ -96,7 +105,12 @@ export default {
       this.toast.text = `Tarea "${tarea.nombre}" eliminada`;
       this.tareas = this.tareas.filter(t => t.id !== tarea.id);
     },
-    // Completar tarea
+    /**
+     * Marcar como completada o no completada: se ejecuta al hacer click en el botón de completar
+     * @method
+     * @async
+     * @param {Object} tarea
+     */
     async completeTarea (tarea) {
       tarea.completado = !tarea.completado;
       this.loading = true;
@@ -109,7 +123,12 @@ export default {
       }
       this.toast.text = `Tarea "${tarea.nombre}" marcada como ${tarea.completado ? "completada" : "no completada"}`;
     },
-    // Modificar tarea
+    /**
+     * Modificar tarea: habilita el input para modificar el nombre de la tarea y si se vuelve a hacer click, se guardan los cambios
+     * @method
+     * @async
+     * @param {Object} tarea
+     */
     async modificarTarea (tarea) {
       if (!this.edit) {
         this.edit = tarea.id;
