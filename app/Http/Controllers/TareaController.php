@@ -24,6 +24,9 @@ class TareaController extends Controller {
     public function store(Request $request) {
         $nuevaTarea = new Tarea;
         $nuevaTarea->nombre = $request->tarea["nombre"];
+        $nuevaTarea->completado = false;
+        $nuevaTarea->created_at = Carbon::now();
+        $nuevaTarea->updated_at = Carbon::now();
         $nuevaTarea->save();
         return $nuevaTarea;
     }
