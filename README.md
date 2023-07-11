@@ -2,6 +2,8 @@
 
 Lista de tareas utilizando Laravel, base de datos MySQL y Vue.
 
+Demo: https://lista-tareas.yizack.com
+
 Video demostración
 
 https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/2f34e23e-d797-411c-ba30-64b5e77ae773
