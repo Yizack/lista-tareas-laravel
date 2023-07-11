@@ -19,7 +19,7 @@ class ApiService {
   }
 
   async modificarTarea (id, tarea) {
-    await axios.put(`/api/tareas/${id}`, { tarea }).then(res => res.data).catch(() => ({}));
+    return await axios.put(`/api/tareas/${id}`, { tarea }).then(res => res.data).catch(() => ({}));
   }
 }
 

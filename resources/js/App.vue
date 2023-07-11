@@ -33,7 +33,7 @@ import ApiService from "./utils/api.js";
             <button class="btn btn-danger tarea-button" type="button" @click="deleteTarea(tarea.id)">
               <IconifyIcon icon="ic:round-close" />
             </button>
-            <button class="btn btn-primary tarea-button" type="button" @click="editTarea(tarea)">
+            <button class="btn btn-primary tarea-button" type="button" @click="modificarTarea(tarea)">
               <IconifyIcon v-if="edit === tarea.id" icon="ic:round-save" />
               <IconifyIcon v-else icon="ic:outline-edit" />
             </button>
