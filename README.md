@@ -96,6 +96,8 @@ php artisan serve
 
 ## REST API
 
+### Endpoints 
+
 Puntos finales de la API
 
 | Endpoint          | Método | Descripción              |
@@ -105,6 +107,8 @@ Puntos finales de la API
 | `/api/tareas/:id` | PUT    | Modificar tarea          |
 | `/api/tareas/:id` | DELETE | Eliminar tarea           |
 | `/api/tareas/:id` | PATCH  | Completar tarea          |
+
+### Propiedades 
 
 La API web devuelve todos los datos de respuesta como un objeto JSON. A continuación se muestran tablas con la descripción de todas las propiedades.
 
