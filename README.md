@@ -1,16 +1,27 @@
 # Prueba: Lista de Tareas
 
-Prueba de nivel intermedio
+Lista de tareas utilizando Laravel, base de datos MySQL y Vue.
+
+## Índice
+- [Tecnologías](#tecnologías)
+- [Requerimientos para reproducción](#requerimientos-para-reproducción)
+- [Pasos de instalación del proyecto](#pasos-de-instalación-del-proyecto)
+- [Pasos para ejecutar el proyecto](#pasos-para-ejecutar-el-proyecto)
+- [REST API](#rest-api)
+- [Ejemplo](#ejemplo)
+- [Información adicional (Base de datos)](#información-adicional-base-de-datos)
+- [Desarrollo](#desarrollo)
 
 ## Tecnologías
-- PHP
-- Laravel
-- Composer
-- MySQL
-- Node.js
-- Vue 3
-- Vite
-- Bootstrap 5
+- Backend:
+  - Laravel (PHP Framework)
+  - Composer
+  - MySQL
+  - Node.js
+  - Vite
+- Frontend:
+  - Vue 3
+  - Bootstrap 5
 
 ## Requerimientos para reproducción
 - Descargar e Instalar [GitHub CLI](https://cli.github.com/)
@@ -18,7 +29,7 @@ Prueba de nivel intermedio
 - Dentro de la carpeta `C:\xampp\php`, habilitar la extensión zip en el archivo `php.ini` de PHP si es necesario para habilitar la instalación de los paquetes de composer
 - Descargar e instalar [Composer](https://getcomposer.org/download/) (2.5.8)
 - Descargar e instalar [Node.js](https://nodejs.org/en/download) (18.16.1)
-- Instalar PNPM utilizando el comando `npm install pnpm@latest -g`
+- Instalar [pnpm](https://pnpm.io/) utilizando el comando `npm install pnpm@latest -g`
 
 ## Pasos de instalación del proyecto
 1. Clonar el repositorio de GitHub.
@@ -39,7 +50,7 @@ cd prueba-intermedio-tareas
 composer install
 ```
 
-4. Comando para instalar paquetes npm utilizando PNPM
+4. Comando para instalar paquetes npm utilizando pnpm
 
 ```sh
 pnpm install
@@ -79,27 +90,6 @@ php artisan serve
 
 ![captura-start](images/captura-start.jpg)
 
-## Ejemplo
-
-Captura del funcionamiento
-
-![captura](images/captura.jpg)
-
-## Desarrollo
-
-Para realizar cambios en entorno de desarrollo
-
-1. Ejecutar el comando de entorno de desarrollo de Vite
-
-```sh
-pnpm dev
-```
-
-2. En otra consola sin cerrar la consola anterior, ejectuar el servidor
-
-```sh
-php artisan serve
-```
 
 ## REST API
 
@@ -112,6 +102,12 @@ Puntos finales de la API
 | `/api/tareas/:id` | PUT    | Modificar tarea          |
 | `/api/tareas/:id` | DELETE | Eliminar tarea           |
 | `/api/tareas/:id` | PATCH  | Completar tarea          |
+
+## Ejemplo
+
+Captura del funcionamiento
+
+![captura](images/captura.jpg)
 
 
 ## Información adicional (Base de datos)
@@ -129,3 +125,19 @@ El archivo del controlador de tareas donde se encuentran las acciones está loca
 Para motivos de demostración de conocimiento también he creado un archivo con instrucciones para crear la tabla de la base de datos y los procedimientos de almacenado en caso de que no exista una opción de migración de base de datos como la que ofrece Laravel.
 
 El archivo con las instrucciones se puede encontrar en [`db.sql`](/db.sql)
+
+## Desarrollo
+
+Para realizar cambios en entorno de desarrollo
+
+1. Ejecutar el comando de entorno de desarrollo de Vite
+
+```sh
+pnpm dev
+```
+
+2. En otra consola sin cerrar la consola anterior, ejectuar el servidor
+
+```sh
+php artisan serve
+```
