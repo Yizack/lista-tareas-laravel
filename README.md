@@ -4,7 +4,7 @@ Lista de tareas utilizando Laravel, base de datos MySQL y Vue.
 
 Video demostración
 
-https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/c3315276-d1ff-431d-b1da-8af63f96c513
+https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/2f34e23e-d797-411c-ba30-64b5e77ae773
 
 ## Índice
 - [Tecnologías](#tecnologías)
@@ -68,8 +68,7 @@ Para la ejecución del proyecto se necesitará realizar los siguientes pasos.
 
 1. Iniciar Apache y MySQL por ejemplo en XAMPP
 
-![xampp](https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/2d80ff7d-e715-4346-9681-0dc7a46b0c6c)
-
+![xampp](https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/23df3714-d0cb-444d-b177-065c4fcab401)
 
 2. Abrir una consola en el directorio del proyecto y ejecutar el siguiente comando para realizar la migración de la base de datos
 
@@ -93,7 +92,7 @@ php artisan serve
 
 5. Pantalla inicial si todo se ha ejecutado correctamente.
 
-![captura-start](https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/08e289c7-9aa4-4458-99b6-993c569210b7)
+![captura-start](https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/cbcb0f43-73e2-4349-abbb-b468533d0318)
 
 ## REST API
 
@@ -111,7 +110,7 @@ Puntos finales de la API
 
 Captura del funcionamiento
 
-![captura](https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/e051fbd9-0e65-4d53-afa7-1817ed095a34)
+![captura](https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/0f8d7587-c9e7-442c-b400-81b6f908e201)
 
 ## Información adicional (Base de datos)
 
