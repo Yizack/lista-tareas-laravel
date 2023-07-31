@@ -25,6 +25,7 @@ https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/2f34e23e-d797
   - MySQL
   - Node.js
   - Vite
+  - Inertia
 - Frontend:
   - Vue 3
   - Bootstrap 5
