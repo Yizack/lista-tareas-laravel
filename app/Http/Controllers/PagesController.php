@@ -8,12 +8,10 @@ use Illuminate\Http\Request;
 class PagesController extends Controller {
     public function index () {
         return inertia("index", [
-            "tareas" => Tarea::orderBy("created_at", "asc")->get()
+            "tareas" => Tarea::mostRecent()->get()
         ]);
     }
     public function about () {
-        return inertia("about", [
-            "about" => "hola mundo"
-        ]);
+        return inertia("about");
     }
 }
