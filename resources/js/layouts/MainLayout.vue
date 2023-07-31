@@ -7,8 +7,8 @@ import { Link } from "@inertiajs/vue3";
     <div class="flex-fill d-flex align-items-center">
       <slot />
     </div>
-    <footer class="py-3 my-4">
-      <ul class="nav justify-content-center border-top pb-3 mb-3">
+    <footer class="py-3">
+      <ul class="nav justify-content-center border-top">
         <li class="nav-item">
           <Link class="nav-link px-2" href="/">Inicio</Link>
         </li>
@@ -22,3 +22,16 @@ import { Link } from "@inertiajs/vue3";
     </footer>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      dark: JSON.parse(localStorage.getItem("dark"))
+    };
+  },
+  mounted () {
+    document.body.setAttribute("data-bs-theme", this.dark ? "dark" : "light");
+  },
+};
+</script>

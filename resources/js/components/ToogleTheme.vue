@@ -16,9 +16,6 @@ export default {
       dark: JSON.parse(localStorage.getItem("dark"))
     };
   },
-  mounted () {
-    document.body.setAttribute("data-bs-theme", this.dark ? "dark" : "light");
-  },
   methods: {
     /**
      * Cambiar tema de la aplicación

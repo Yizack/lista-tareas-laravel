@@ -24,7 +24,7 @@ import ApiService from "@/utils/api.js";
             Agregar
           </button>
         </div>
-        <ul class="px-3">
+        <ul class="tareas px-3">
           <li v-for="(tarea, i) in tareas" :key="tarea.id" class="d-flex gap-2 align-items-center py-2 text-dark-emphasis" :class="{'border-bottom': i < tareas.length - 1}">
             <input v-if="edit === tarea.id" v-model.trim="tarea.nombre" class="form-control flex-fill fw-medium" type="text">
             <span v-else class="flex-fill fw-medium" :class="{'text-decoration-line-through fst-italic text-muted': tarea.completado}">
