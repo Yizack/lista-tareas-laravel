@@ -51,9 +51,14 @@ import ApiService from "@/utils/api.js";
 
 <script>
 export default {
+  props: {
+    tareas: {
+      type: Array,
+      default: () => []
+    }
+  },
   data () {
     return {
-      tareas: [],
       nuevaTarea: {
         nombre: ""
       },
@@ -64,9 +69,6 @@ export default {
         success: false
       }
     };
-  },
-  async mounted () {
-    this.tareas = await ApiService.getTareas();
   },
   methods: {
     /**
