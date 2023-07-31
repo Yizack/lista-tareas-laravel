@@ -16,7 +16,7 @@ import { Link } from "@inertiajs/vue3";
           <Link class="nav-link px-2" href="/about">Sobre</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-2" href="https://github.com/Yizack/prueba-intermedio-tareas">Github</a>
+          <a class="nav-link px-2" href="https://github.com/Yizack/prueba-intermedio-tareas" target="_blank">Github</a>
         </li>
       </ul>
     </footer>
