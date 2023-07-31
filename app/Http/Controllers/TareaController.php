@@ -12,7 +12,7 @@ class TareaController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return Tarea::orderBy("created_at", "asc")->get();
+        return Tarea::mostRecent()->get();
     }
 
     /**

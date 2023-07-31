@@ -15,6 +15,6 @@ class Tarea extends Model {
   ];
 
   public function scopeMostRecent(Builder $query): Builder {
-    return $query->orderByDesc("created_at", "asc");
+    return $query->orderBy("created_at", "asc");
   }
 }
