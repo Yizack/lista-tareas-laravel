@@ -1,13 +1,13 @@
 <script setup>
-import IconifyIcon from "./components/IconifyIcon.vue";
-import LoadingSpinner from "./components/LoadingSpinner.vue";
-import ToastMessage from "./components/ToastMessage.vue";
-import ToogleTheme from "./components/ToogleTheme.vue";
-import ApiService from "./utils/api.js";
+import IconifyIcon from "@/components/IconifyIcon.vue";
+import LoadingSpinner from "@/components/LoadingSpinner.vue";
+import ToastMessage from "@/components/ToastMessage.vue";
+import ToogleTheme from "@/components/ToogleTheme.vue";
+import ApiService from "@/utils/api.js";
 </script>
 
 <template>
-  <div class="d-flex vh-100 align-items-center container">
+  <main class="container">
     <div class="mx-auto col-12 col-md-7">
       <div class="text-end p-2">
         <ToogleTheme />
@@ -46,7 +46,7 @@ import ApiService from "./utils/api.js";
       </form>
     </div>
     <ToastMessage v-if="!loading && toast.text" :text="toast.text" :success="toast.success" />
-  </div>
+  </main>
 </template>
 
 <script>
