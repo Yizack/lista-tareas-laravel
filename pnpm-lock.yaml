@@ -5,15 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@inertiajs/inertia':
-    specifier: ^0.11.1
-    version: 0.11.1
-  '@inertiajs/inertia-vue3':
-    specifier: ^0.6.0
-    version: 0.6.0(@inertiajs/inertia@0.11.1)(vue@3.3.4)
+  '@inertiajs/vue3':
+    specifier: ^1.0.9
+    version: 1.0.9(vue@3.3.4)
   bootstrap:
     specifier: ^5.3.1
     version: 5.3.1(@popperjs/core@2.11.8)
+  ofetch:
+    specifier: ^1.1.1
+    version: 1.1.1
 
 devDependencies:
   '@iconify/vue':
@@ -25,9 +25,6 @@ devDependencies:
   '@vitejs/plugin-vue':
     specifier: ^4.2.3
     version: 4.2.3(vite@4.4.7)(vue@3.3.4)
-  axios:
-    specifier: ^1.4.0
-    version: 1.4.0
   laravel-vite-plugin:
     specifier: ^0.7.8
     version: 0.7.8(vite@4.4.7)
@@ -342,24 +339,26 @@ packages:
       vue: 3.3.4
     dev: true
 
-  /@inertiajs/inertia-vue3@0.6.0(@inertiajs/inertia@0.11.1)(vue@3.3.4):
-    resolution: {integrity: sha512-qhPBtd/G0VS7vVVbYw1rrqKB6JqRusxqt+5ec2GLmK6t7fTlBBnZ3KsakmGZLSM1m1OGkNcfn4ifmCk3zfA8RQ==}
+  /@inertiajs/core@1.0.9:
+    resolution: {integrity: sha512-Vd/4akXnY90qwtPJ1nVGtLXYhyGZdDjvQ4rv5qeqFYmqLEARdhDd7Lku1BwkboZX6GSTgDkipBSSGTKuRemOkQ==}
+    dependencies:
+      axios: 1.4.0
+      deepmerge: 4.3.1
+      nprogress: 0.2.0
+      qs: 6.11.2
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /@inertiajs/vue3@1.0.9(vue@3.3.4):
+    resolution: {integrity: sha512-KoH1KEYxtHs5vbBb3DTTRh9bjFLBakFeqfj95YzwQXkaKaGkE3M79O0n4CaQqG7BSiOdQ3Z3pB2bx+CHpYV9uA==}
     peerDependencies:
-      '@inertiajs/inertia': ^0.11.0
       vue: ^3.0.0
     dependencies:
-      '@inertiajs/inertia': 0.11.1
+      '@inertiajs/core': 1.0.9
       lodash.clonedeep: 4.5.0
       lodash.isequal: 4.5.0
       vue: 3.3.4
-    dev: false
-
-  /@inertiajs/inertia@0.11.1:
-    resolution: {integrity: sha512-btmV53c54oW4Z9XF0YyTdIUnM7ue0ONy3/KJOz6J1C5CYIwimiKfDMpz8ZbGJuxS+SPdOlNsqj2ZhlHslpJRZg==}
-    dependencies:
-      axios: 0.21.4
-      deepmerge: 4.3.1
-      qs: 6.11.2
     transitivePeerDependencies:
       - debug
     dev: false
@@ -679,14 +678,6 @@ packages:
 
   /asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
-    dev: true
-
-  /axios@0.21.4:
-    resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
-    dependencies:
-      follow-redirects: 1.15.2
-    transitivePeerDependencies:
-      - debug
     dev: false
 
   /axios@1.4.0:
@@ -697,7 +688,7 @@ packages:
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
-    dev: true
+    dev: false
 
   /balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -765,7 +756,7 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       delayed-stream: 1.0.0
-    dev: true
+    dev: false
 
   /concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
@@ -813,7 +804,11 @@ packages:
   /delayed-stream@1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}
     engines: {node: '>=0.4.0'}
-    dev: true
+    dev: false
+
+  /destr@2.0.0:
+    resolution: {integrity: sha512-FJ9RDpf3GicEBvzI3jxc2XhHzbqD8p4ANw/1kPsFBfTvP1b7Gn/Lg1vO7R9J4IVgoMbyUmFrFGZafJ1hPZpvlg==}
+    dev: false
 
   /dir-glob@3.0.1:
     resolution: {integrity: sha512-WkrWp9GR4KXfKGYzOLmTuGVi1UWFfws377n9cc55/tb6DuqyF6pcQ5AbiHEshaDpY9v6oaSr2XCDidGmMwdzIA==}
@@ -1063,6 +1058,7 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
+    dev: false
 
   /form-data@4.0.0:
     resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
@@ -1071,7 +1067,7 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
-    dev: true
+    dev: false
 
   /fs.realpath@1.0.0:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
@@ -1309,14 +1305,14 @@ packages:
   /mime-db@1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
     engines: {node: '>= 0.6'}
-    dev: true
+    dev: false
 
   /mime-types@2.1.35:
     resolution: {integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==}
     engines: {node: '>= 0.6'}
     dependencies:
       mime-db: 1.52.0
-    dev: true
+    dev: false
 
   /minimatch@3.1.2:
     resolution: {integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==}
@@ -1341,6 +1337,14 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: true
 
+  /node-fetch-native@1.2.0:
+    resolution: {integrity: sha512-5IAMBTl9p6PaAjYCnMv5FmqIF6GcZnawAVnzaCG0rX2aYZJ4CxEkZNtVPuTRug7fL7wyM5BQYTlAzcyMPi6oTQ==}
+    dev: false
+
+  /nprogress@0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
+    dev: false
+
   /nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
     dependencies:
@@ -1349,6 +1353,14 @@ packages:
 
   /object-inspect@1.12.3:
     resolution: {integrity: sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g==}
+    dev: false
+
+  /ofetch@1.1.1:
+    resolution: {integrity: sha512-SSMoktrp9SNLi20BWfB/BnnKcL0RDigXThD/mZBeQxkIRv1xrd9183MtLdsqRYLYSqW0eTr5t8w8MqjNhvoOQQ==}
+    dependencies:
+      destr: 2.0.0
+      node-fetch-native: 1.2.0
+      ufo: 1.2.0
     dev: false
 
   /once@1.4.0:
@@ -1441,7 +1453,7 @@ packages:
 
   /proxy-from-env@1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
-    dev: true
+    dev: false
 
   /punycode@2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
@@ -1592,6 +1604,10 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
+
+  /ufo@1.2.0:
+    resolution: {integrity: sha512-RsPyTbqORDNDxqAdQPQBpgqhWle1VcTSou/FraClYlHf6TZnQcGslpLcAphNR+sQW4q5lLWLbOsRlh9j24baQg==}
+    dev: false
 
   /uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}

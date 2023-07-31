@@ -1,25 +1,38 @@
-import axios from "axios";
+import { ofetch } from "ofetch";
 
 class ApiService {
 
   async getTareas () {
-    return await axios.get("/api/tareas").then(res => res.data).catch(() => []);
+    return await ofetch("/api/tareas", {
+      method: "GET"
+    }).catch(() => []);
   }
 
   async addTarea (tarea) {
-    return await axios.post("/api/tareas", { tarea }).then(res => res.data).catch(() => ({}));
+    return await ofetch("/api/tareas", {
+      method: "POST",
+      body: { tarea }
+    }).catch(() => ({}));
   }
 
   async deleteTarea (id) {
-    return await axios.delete(`/api/tareas/${id}`).then(res => res.data).catch(() => ({}));
+    return await ofetch(`/api/tareas/${id}`, {
+      method: "DELETE"
+    }).catch(() => ({}));
   }
 
   async completeTarea (id, value) {
-    return await axios.patch(`/api/tareas/${id}`, { completado: value }).then(res => res.data).catch(() => ({}));
+    return await ofetch(`/api/tareas/${id}`, {
+      method: "PATCH",
+      body: { completado: value }
+    }).catch(() => ({}));
   }
 
   async modificarTarea (id, tarea) {
-    return await axios.put(`/api/tareas/${id}`, { tarea }).then(res => res.data).catch(() => ({}));
+    return await ofetch(`/api/tareas/${id}`, {
+      method: "PUT",
+      body: { tarea }
+    }).catch(() => ({}));
   }
 }
 

@@ -4,7 +4,7 @@ import "./../css/theme-light.css";
 import "./../css/theme-dark.css";
 import "./../css/app.css";
 import "./../css/buttons.css";
-import { createInertiaApp } from "@inertiajs/inertia-vue3";
+import { createInertiaApp } from "@inertiajs/vue3";
 import MainLayout from "@/layouts/MainLayout.vue";
 
 createInertiaApp({

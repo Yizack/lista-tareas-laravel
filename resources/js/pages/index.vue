@@ -105,7 +105,11 @@ export default {
         return;
       }
       this.toast.text = `Tarea "${tarea.nombre}" eliminada`;
-      this.tareas = this.tareas.filter(t => t.id !== tarea.id);
+      this.tareas.find((t, i) => {
+        if (t.id !== tarea.id) return false;
+        this.tareas.splice(i, 1);
+        return true;
+      });
     },
     /**
      * Marcar como completada o no completada: se ejecuta al hacer click en el botón de completar
