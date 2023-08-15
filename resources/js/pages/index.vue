@@ -1,9 +1,9 @@
 <script setup>
-import IconifyIcon from "@/components/IconifyIcon.vue";
-import LoadingSpinner from "@/components/LoadingSpinner.vue";
-import ToastMessage from "@/components/ToastMessage.vue";
-import ToogleTheme from "@/components/ToogleTheme.vue";
-import ApiService from "@/utils/api.js";
+import IconifyIcon from "~/components/IconifyIcon.vue";
+import LoadingSpinner from "~/components/LoadingSpinner.vue";
+import ToastMessage from "~/components/ToastMessage.vue";
+import ToogleTheme from "~/components/ToogleTheme.vue";
+import ApiService from "~/utils/api.js";
 </script>
 
 <template>

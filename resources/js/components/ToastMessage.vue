@@ -1,6 +1,6 @@
 <script setup>
 import IconifyIcon from "./IconifyIcon.vue";
-import { showToast } from "./../utils/bootstrap.js";
+import { showToast } from "~/utils/bootstrap.js";
 </script>
 
 <template>

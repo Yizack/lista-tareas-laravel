@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@inertiajs/vue3':
-    specifier: ^1.0.9
-    version: 1.0.9(vue@3.3.4)
+    specifier: ^1.0.10
+    version: 1.0.10(vue@3.3.4)
   bootstrap:
     specifier: ^5.3.1
     version: 5.3.1(@popperjs/core@2.11.8)
@@ -24,19 +24,16 @@ devDependencies:
     version: 0.1.1(eslint@8.44.0)
   '@vitejs/plugin-vue':
     specifier: ^4.2.3
-    version: 4.2.3(vite@4.4.7)(vue@3.3.4)
+    version: 4.2.3(vite@4.4.9)(vue@3.3.4)
   laravel-vite-plugin:
-    specifier: ^0.7.8
-    version: 0.7.8(vite@4.4.7)
-  lodash:
-    specifier: ^4.17.21
-    version: 4.17.21
+    specifier: ^0.8.0
+    version: 0.8.0(vite@4.4.9)
   postcss:
     specifier: ^8.4.27
     version: 8.4.27
   vite:
-    specifier: ^4.4.7
-    version: 4.4.7
+    specifier: ^4.4.9
+    version: 4.4.9
   vue:
     specifier: ^3.3.4
     version: 3.3.4
@@ -339,8 +336,8 @@ packages:
       vue: 3.3.4
     dev: true
 
-  /@inertiajs/core@1.0.9:
-    resolution: {integrity: sha512-Vd/4akXnY90qwtPJ1nVGtLXYhyGZdDjvQ4rv5qeqFYmqLEARdhDd7Lku1BwkboZX6GSTgDkipBSSGTKuRemOkQ==}
+  /@inertiajs/core@1.0.10:
+    resolution: {integrity: sha512-tki90YtXqlKiPz/pvv0kBVHELypDrwL8Fze+qgxnI1aaTxWRTyj0iye60xQVO44yBYi2wS06vuZ3trfaD4Y6Gg==}
     dependencies:
       axios: 1.4.0
       deepmerge: 4.3.1
@@ -350,12 +347,12 @@ packages:
       - debug
     dev: false
 
-  /@inertiajs/vue3@1.0.9(vue@3.3.4):
-    resolution: {integrity: sha512-KoH1KEYxtHs5vbBb3DTTRh9bjFLBakFeqfj95YzwQXkaKaGkE3M79O0n4CaQqG7BSiOdQ3Z3pB2bx+CHpYV9uA==}
+  /@inertiajs/vue3@1.0.10(vue@3.3.4):
+    resolution: {integrity: sha512-ZJX+HNfs+3fwgMdJsuOo6rwdHNELQLB4CEGJKGg4shq/STMjgKzKXDqsOXcur116KeHQUKWyHBkUwf9j+JEzBA==}
     peerDependencies:
       vue: ^3.0.0
     dependencies:
-      '@inertiajs/core': 1.0.9
+      '@inertiajs/core': 1.0.10
       lodash.clonedeep: 4.5.0
       lodash.isequal: 4.5.0
       vue: 3.3.4
@@ -548,14 +545,14 @@ packages:
       eslint-visitor-keys: 3.4.1
     dev: true
 
-  /@vitejs/plugin-vue@4.2.3(vite@4.4.7)(vue@3.3.4):
+  /@vitejs/plugin-vue@4.2.3(vite@4.4.9)(vue@3.3.4):
     resolution: {integrity: sha512-R6JDUfiZbJA9cMiguQ7jxALsgiprjBeHL5ikpXfJCH62pPHtI+JdJ5xWj6Ev73yXSlYl86+blXn1kZHQ7uElxw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.4.7
+      vite: 4.4.9
       vue: 3.3.4
     dev: true
 
@@ -1234,15 +1231,15 @@ packages:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
     dev: true
 
-  /laravel-vite-plugin@0.7.8(vite@4.4.7):
-    resolution: {integrity: sha512-HWYqpQYHR3kEQ1LsHX7gHJoNNf0bz5z5mDaHBLzS+PGLCTmYqlU5/SZyeEgObV7z7bC/cnStYcY9H1DI1D5Udg==}
+  /laravel-vite-plugin@0.8.0(vite@4.4.9):
+    resolution: {integrity: sha512-6VjLI+azBpeK6rWBiKcb/En5GnTdYpL0U4zS8gXYvb2/VSq4mlau5H3NWpSktUDBMM1b97LLgICx5zevi8IY0w==}
     engines: {node: '>=14'}
     peerDependencies:
       vite: ^3.0.0 || ^4.0.0
     dependencies:
       picocolors: 1.0.0
-      vite: 4.4.7
-      vite-plugin-full-reload: 1.0.5(vite@4.4.7)
+      vite: 4.4.9
+      vite-plugin-full-reload: 1.0.5(vite@4.4.9)
     dev: true
 
   /levn@0.4.1:
@@ -1488,8 +1485,8 @@ packages:
       glob: 7.2.3
     dev: true
 
-  /rollup@3.26.2:
-    resolution: {integrity: sha512-6umBIGVz93er97pMgQO08LuH3m6PUb3jlDUUGFsNJB6VgTCUaDFpupf5JfU30529m/UKOgmiX+uY6Sx8cOYpLA==}
+  /rollup@3.28.0:
+    resolution: {integrity: sha512-d7zhvo1OUY2SXSM6pfNjgD5+d0Nz87CUp4mt8l/GgVP3oBsPwzNvSzyu1me6BSG9JIgWNTVcafIXBIyM8yQ3yw==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -1619,18 +1616,18 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
-  /vite-plugin-full-reload@1.0.5(vite@4.4.7):
+  /vite-plugin-full-reload@1.0.5(vite@4.4.9):
     resolution: {integrity: sha512-kVZFDFWr0DxiHn6MuDVTQf7gnWIdETGlZh0hvTiMXzRN80vgF4PKbONSq8U1d0WtHsKaFODTQgJeakLacoPZEQ==}
     peerDependencies:
       vite: ^2 || ^3 || ^4
     dependencies:
       picocolors: 1.0.0
       picomatch: 2.3.1
-      vite: 4.4.7
+      vite: 4.4.9
     dev: true
 
-  /vite@4.4.7:
-    resolution: {integrity: sha512-6pYf9QJ1mHylfVh39HpuSfMPojPSKVxZvnclX1K1FyZ1PXDOcLBibdq5t1qxJSnL63ca8Wf4zts6mD8u8oc9Fw==}
+  /vite@4.4.9:
+    resolution: {integrity: sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -1659,7 +1656,7 @@ packages:
     dependencies:
       esbuild: 0.18.11
       postcss: 8.4.27
-      rollup: 3.26.2
+      rollup: 3.28.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
