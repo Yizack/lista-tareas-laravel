@@ -18,15 +18,16 @@ Route::middleware("auth:sanctum")->get("/user", function (Request $request) {
     return $request->user();
 });
 
-Route::get("/tareas", [TareaController::class, "index"]);
 
-Route::prefix("/tareas")->group(function() {
+
+Route::prefix("/tareas")->group(function () {
+    Route::get("/", [TareaController::class, "obtenerTareas"]);
     // Crear
-    Route::post("/",[TareaController::class, "store"]);
+    Route::post("/",[TareaController::class, "guardarTareas"]);
     // Modificar
-    Route::put("/{id}" , [TareaController::class, "update"]);
+    Route::put("/{id}" , [TareaController::class, "actualizarTarea"]);
     // Eliminar
-    Route::delete("/{id}", [TareaController::class, "destroy"] );
+    Route::delete("/{id}", [TareaController::class, "eliminarTarea"] );
     // Completar
-    Route::patch("/{id}" , [TareaController::class, "complete"]);
+    Route::patch("/{id}" , [TareaController::class, "completarTarea"]);
 });

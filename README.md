@@ -1,4 +1,4 @@
-# Prueba: Lista de Tareas
+# Lista de Tareas
 
 Lista de tareas utilizando Laravel, base de datos MySQL y Vue.
 

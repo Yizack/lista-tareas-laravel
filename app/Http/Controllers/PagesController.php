@@ -3,15 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tarea;
-use Illuminate\Http\Request;
 
 class PagesController extends Controller {
-    public function index () {
-        return inertia("index", [
-            "tareas" => Tarea::mostRecent()->get()
-        ]);
+    protected function index () {
+        try {
+            $tareas = Tarea::mostRecent()->get();
+            return inertia("index", [
+                "tareas" => $tareas
+            ]);
+        }
+        catch (\Exception $e) {
+            return response()->json([
+                "message" => "Error al obtener las tareas",
+                "error" => $e->getMessage()
+            ], 400);
+        }
     }
-    public function about () {
+    protected function about () {
         return inertia("about");
     }
 }
