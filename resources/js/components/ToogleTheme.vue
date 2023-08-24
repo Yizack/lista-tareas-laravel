@@ -26,6 +26,6 @@ export default {
       localStorage.setItem("dark", this.dark);
       document.body.setAttribute("data-bs-theme", this.dark ? "dark" : "light");
     }
-  },  
+  },
 };
 </script>
