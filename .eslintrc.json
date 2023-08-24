@@ -5,7 +5,8 @@
     "es2021": true
   },
   "extends": [
-    "@nuxt/eslint-config"
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended"
   ],
   "overrides": [{
     "files": ["*.vue", "*.js"],
