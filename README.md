@@ -79,23 +79,26 @@ Para la ejecución del proyecto se necesitará realizar los siguientes pasos.
 php artisan migrate
 ```
 
-4. Ejecutar la build de Vue con Vite
+4. Generar una clave de aplicación
+
+```sh
+php artisan key:generate
+```
+
+5. Ejecutar la build de Vue con Vite
 
 ```sh
 pnpm build
 ```
 
-5. Para iniciar el servidor, ejecutar
+6. Para iniciar el servidor, ejecutar
 
 ```sh
 php artisan serve
 ```
 
-6. Acceder a la dirección http://localhost:8000 en el navegador.
+7. Acceder a la dirección http://localhost:8000 en el navegador.
 
-7. Generar "App key" y actualizar
-
-![appkey](https://github.com/Yizack/prueba-intermedio-tareas/assets/16264115/0a015c1d-f13a-40c1-8cf8-c91e58c81c7e)
 
 8. Pantalla inicial si todo se ha ejecutado correctamente.
 
